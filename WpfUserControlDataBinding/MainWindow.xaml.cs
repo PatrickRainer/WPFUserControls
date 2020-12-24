@@ -22,15 +22,15 @@ namespace WpfUserControlDataBinding
     /// </summary>
     public partial class MainWindow : INotifyPropertyChanged
     {
-        string _windowPropertyText;
+        string _nameText;
 
-        public string WindowPropertyText
+        public string NameText
         {
-            get => _windowPropertyText;
+            get => _nameText;
             set
             {
-                if (value == _windowPropertyText) return;
-                _windowPropertyText = value;
+                if (value == _nameText) return;
+                _nameText = value;
                 OnPropertyChanged();
             }
         }
@@ -39,7 +39,7 @@ namespace WpfUserControlDataBinding
         {
             InitializeComponent();
 
-            WindowPropertyText = "Enter Text here!";
+            NameText = "Hans Muster";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

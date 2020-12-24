@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WpfUserControlDataBinding.UserControls.FieldUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfUserControlDataBinding.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="100">
+    <StackPanel Orientation="Horizontal" x:Name="LayoutRoot">
+        <TextBlock Text="{Binding Path=Label, UpdateSourceTrigger=PropertyChanged}"
+                   Width="100"
+                   VerticalAlignment="Center"/>
+        <TextBox Text="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                 Width="100"/>
+    </StackPanel>
+</UserControl>

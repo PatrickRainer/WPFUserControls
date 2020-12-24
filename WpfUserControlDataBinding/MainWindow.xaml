@@ -6,24 +6,12 @@
         xmlns:local="clr-namespace:WpfUserControlDataBinding"
         xmlns:userControls="clr-namespace:WpfUserControlDataBinding.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="800" Background="LightGray" WindowStartupLocation="CenterScreen"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <StackPanel Background="Green">
-        <TextBlock Text="The Entry field which has a binding to the Window Property:"
-                   Margin="20,0"/>
-        <TextBox Text="{Binding WindowPropertyText, UpdateSourceTrigger=PropertyChanged}"
-                 Margin="20,0,20,0"/>
-        <TextBlock Text="The TextBlock which shows the window property:"
-                   Margin="20,20,20,0"/>
-        <TextBlock Text="{Binding WindowPropertyText}"/>
-
-        <StackPanel Background="CornflowerBlue">
-            <TextBlock Text="The Entry field which has a binding to the User Control Property:"
-                       Margin="20,0"/>
-            <userControls:FieldUserControl
-                Label="This is the Label"
-                Value="{Binding WindowPropertyText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        </StackPanel>
-
+    <StackPanel >
+        <userControls:LabeledTextBoxControl
+            LabelText="Name"
+            Value="{Binding NameText}"
+            LabelPosition="Left"/>
     </StackPanel>
 </Window>
